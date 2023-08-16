@@ -20,17 +20,7 @@ After that, it converts an MP4 audio file into a WAV audio file. It displays the
 In the next code, we load an audio file and resample it at a fixed sample rate of 44100 Hz. It then normalizes the audio so that the maximum amplitude is 1.0. This is a common pre-processing step before using audio data for machine learning applications, as it ensures that the audio data is consistent and within a reasonable range of values. The code also checks if the GPU is available and sets the device accordingly.  
 This code splits the audio into 20-second segments and displays them. Then, it computes the spectral centroid of each segment and stores it in a list. It finds the segment with the highest spectral centroid and stores its index. It then retrieves the segment with the highest spectral centroid and stores it as a dictionary containing audio data and sample rate. Finally, it displays the audio with the highest spectral centroid and plots the corresponding waveform.  
   
-The last code uses the open-unmix library to separate audio data into its components, such as vocals, drums, and bass. It first loads the audio data into a tensor and then uses the `separate` function to separate it. The separated components are then printed out and displayed as audio files in the notebook. Finally, a wave plot is generated for each component to visualize its amplitude over time.  
-   
-The image shows the Wave Plot of vocals  
-  
-        
-The image shows the bass Wave Plot  
-   
-The image shows the wave plot of drums.  
-  
-               
-This image shows the other wave plot.  
+The last code uses the open-unmix library to separate audio data into its components, such as vocals, drums, and bass. It first loads the audio data into a tensor and then uses the `separate` function to separate it. The separated components are then printed out and displayed as audio files in the notebook. Finally, a wave plot is generated for each component to visualize its amplitude over time.   
   
 Theory and concepts from the module that our project links back to:  
   
